@@ -15,33 +15,32 @@
 	编辑21~22行ldap配置
 7、建数据库
 	建库
-	create database internaldns default character set=utf8;
+	CREATE DATABASE `internaldns` /*!40100 DEFAULT CHARACTER SET utf8 */;
 	建记录表
 	CREATE TABLE `dns_records` (
-  	  `id` int(11) NOT NULL AUTO_INCREMENT,
-	  `zone` varchar(50) DEFAULT NULL,
-	  `host` varchar(100) DEFAULT NULL,
-	  `dnstype` varchar(50) DEFAULT NULL,
-	  `data` varchar(100) DEFAULT NULL,
-	  PRIMARY KEY (`id`),
-	  KEY `zone` (`zone`,`host`,`dnstype`,`data`)
-	) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `zone` varchar(50) DEFAULT NULL,
+  `host` varchar(100) DEFAULT NULL,
+  `dnstype` varchar(50) DEFAULT NULL,
+  `data` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `zone` (`zone`,`host`,`dnstype`,`data`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 	建用户表
 	CREATE TABLE `user` (
- 	 `id` int(11) NOT NULL AUTO_INCREMENT,
-	  `username` varchar(50) DEFAULT NULL,
-	  `role` enum('user','admin') DEFAULT 'user',
-	  `ustat` varchar(10) DEFAULT NULL,
-	  `logintime` datetime DEFAULT NULL,
-	  PRIMARY KEY (`id`),
-	  UNIQUE KEY `key` (`username`)
-	) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(50) DEFAULT NULL,
+  `role` enum('user','admin') DEFAULT 'user',
+  `ustat` varchar(10) DEFAULT NULL,
+  `logintime` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `key` (`username`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 	建审计表
 	CREATE TABLE `log` (
-	  `logid` int(11) NOT NULL AUTO_INCREMENT,
-	  `username` varchar(50) DEFAULT NULL,
-	  `content` varchar(2000) DEFAULT NULL,
-	  `logtime` datetime DEFAULT NULL,
-	  PRIMARY KEY (`logid`)
-	) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 
-8、系统可以用了。
+  `logid` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(50) DEFAULT NULL,
+  `content` varchar(2000) DEFAULT NULL,
+  `logtime` datetime DEFAULT NULL,
+  PRIMARY KEY (`logid`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
