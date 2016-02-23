@@ -1,0 +1,81 @@
+[ 2016-01-07T14:07:28+08:00 ] 192.168.102.71 /tech/Dns/index.php/Index/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000816s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000935s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000456s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000523s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.000543s ]
+SQL: SELECT `username`,`role` FROM `user` WHERE ( `username` = 'wangpo' ) AND ( `ustat` = 'on' )  [ RunTime:0.000389s ]
+SQL: SHOW COLUMNS FROM `dns_records` [ RunTime:0.000313s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dns_records` LIMIT 1   [ RunTime:0.000669s ]
+SQL: SELECT * FROM `dns_records` ORDER BY host LIMIT 0,100   [ RunTime:0.003253s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000463s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001089s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.011119s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011209s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000397s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000232s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000113s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000273s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001144s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000328s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000369s ]
+
+[ 2016-01-07T14:07:34+08:00 ] 192.168.102.71 /tech/Dns/index.php/Index/search?sinfo=wptest
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001102s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001226s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000588s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000684s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.001019s ]
+SQL: SELECT `username`,`role` FROM `user` WHERE ( `username` = 'wangpo' ) AND ( `ustat` = 'on' )  [ RunTime:0.000506s ]
+SQL: SHOW COLUMNS FROM `dns_records` [ RunTime:0.000792s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dns_records` WHERE ( (`zone` LIKE '%wptest%') OR (`host` LIKE '%wptest%') OR (`dnstype` LIKE '%wptest%') OR (`data` LIKE '%wptest%') ) LIMIT 1   [ RunTime:0.005802s ]
+SQL: SELECT * FROM `dns_records` WHERE ( (`zone` LIKE '%wptest%') OR (`host` LIKE '%wptest%') OR (`dnstype` LIKE '%wptest%') OR (`data` LIKE '%wptest%') ) ORDER BY host LIMIT 0,100   [ RunTime:0.005609s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000388s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000471s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.013095s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013218s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000704s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000278s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000151s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000302s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001655s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000667s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000720s ]
+
+[ 2016-01-07T14:22:38+08:00 ] 192.168.102.71 /tech/Dns/index.php/Index/modify?updatestr=2621
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000955s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001094s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000562s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000650s ]
+SQL: SHOW COLUMNS FROM `dns_records` [ RunTime:0.000844s ]
+SQL: SELECT * FROM `dns_records` WHERE ( (zone,host) in (select zone,host from dns_records where id in (2621)) )  [ RunTime:0.005527s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000524s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000629s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.013958s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014036s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000191s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000270s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000138s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000255s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000979s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000405s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000457s ]
+

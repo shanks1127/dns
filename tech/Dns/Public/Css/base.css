@@ -1,0 +1,333 @@
+*{
+    padding:0;
+    margin:0;
+}
+body
+{ 
+    text-align:center;
+    background-color:azure;
+    font-size:9pt;
+}
+a
+{
+    text-decoration:none;
+}
+a:visited
+{
+    color:#0000ff;
+}
+a:hover
+{
+    color:#3399FF;
+    text-decoration:underline;
+}
+ a img{border:0px;}
+
+/*主页面样式*/
+#topdiv{
+    width:98.8%;
+    min-width:1300px;
+    margin:0 auto;
+    height: 26px;
+    float:left;
+    display:table;
+    margin-top:5px;
+    border:solid 1px #eee;
+}
+/*搜索框样式*/
+#search_box { 
+    width: 202px; 
+    height: 24px; 
+    background: url(../Images/new/sbg_sch_grn.png); 
+    float:left;
+    margin-top: 1px;
+    
+} 
+#search_box #sinfo { 
+    float: left; 
+    padding: 0; 
+    border: 0;
+    margin:2px 0 0 2px; 
+    width: 172px; 
+    height:20px;
+    background: none; 
+    font-size: 15px; 
+} 
+#search_box #search { 
+    float: right; 
+    margin: 2px 2px 0 0; 
+}
+/*配置管理按钮样式*/
+#btndiv{
+    width: 600px; 
+    height: 24px;
+    float:left;
+}
+/*edit*/
+.btn_edit{
+    width:92px;
+    height:24px;
+    border:none;
+    background:url(../Images/new/btn_edt.png);
+    float:left;
+    margin:1px 0 0 5px;
+}
+/*删除按钮*/
+.btn_del{
+    width:92px;
+    height:24px;
+    border:none;
+    background:url(../Images/new/btn_del.png);
+    float:left;
+    margin-left:2px;
+    margin:1px 0 0 5px;
+}
+.btn_add{
+    width:92px;
+    height:24px;
+    border:none;
+    background:url(../Images/new/btn_add.png);
+    float:left;
+    margin-left:2px;
+    margin:1px 0 0 5px;
+}
+.btn_sync{
+    width:92px;
+    height:24px;
+    border:none;
+    background:url(../Images/new/btn_syn.png);
+    float:left;
+    margin-left:2px;
+    margin:1px 0 0 5px;
+}
+.btn_admin{
+    width:92px;
+    height:24px;
+    border:none;
+    background:url(../Images/new/btn_umg.png);
+    float:left;
+    margin-left:2px;
+    margin:1px 0 0 5px;
+}
+.btn_log{
+    width:92px;
+    height:24px;
+    border:none;
+    background:url(../Images/new/btn_log.png);
+    float:left;
+    margin-left:2px;
+    margin:1px 0 0 5px;
+}
+/*用户登录信息*/
+#login_tip{
+    width:210px;
+    height: 24px;
+    float:right;
+}
+/*按钮样式*/
+.confirm{
+   width:60px;
+   height:26px;
+   border:none;
+   background:url(../Images/btn_confirm.png); 
+}
+.cancel{
+   width:60px;
+   height:26px;
+   border:none;
+   background:url(../Images/btn_cancel.png); 
+}
+.delline{
+   width:82px;
+   height:26px;
+   border:none;
+   background:url(../Images/btn_delline.png); 
+   position: absolute;
+   margin-left:5px; 
+}
+.addline{
+   width:82px;
+   height:26px;
+   border:none;
+   background:url(../Images/btn_addline.png);  
+}
+
+/*保存按钮*/
+.save{
+    width:60px;
+    height:26px;
+    border:none;
+    background:url(../Images/btn_save.png);
+}
+/*分页显示页面样式*/
+#info{
+  width:99%; 
+  min-width:1300px;
+  margin-top:2px;
+  float:left;
+}
+/*表格显示样式*/
+#mytable { 
+    width: 100%; 
+    padding: 0; 
+    margin: 0 auto; 
+    float:left;
+} 
+
+caption { 
+    padding: 0 0 5px 0; 
+    width: 700px; 
+    font: italic 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; 
+    text-align: right; 
+} 
+
+th { 
+    font: bold 16px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; 
+    color: #4f6b72; 
+    border-right: 1px solid #C1DAD7; 
+    border-bottom: 1px solid #C1DAD7; 
+    border-top: 1px solid #C1DAD7; 
+    letter-spacing: 2px; 
+    text-transform: uppercase; 
+    text-align: center; 
+    padding: 6px 6px 6px 12px; 
+    background: #CAE8EA no-repeat; 
+} 
+th.nobg { 
+    border-top: 0; 
+    border-left: 0; 
+    border-right: 1px solid #C1DAD7; 
+    background: none; 
+} 
+
+td { 
+    border-right: 1px solid #C1DAD7; 
+    border-bottom: 1px solid #C1DAD7; 
+    font-size:15px; 
+    padding: 6px 6px 6px 12px; 
+    color: #4f6b72; 
+} 
+
+td.alt { 
+    color: #797268; 
+} 
+
+th.spec { 
+    border-left: 1px solid #C1DAD7; 
+    border-top: 0; 
+    background: #fff no-repeat; 
+    font: bold 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; 
+} 
+
+th.specalt { 
+    border-left: 1px solid #C1DAD7; 
+    border-top: 0; 
+    background: #f5fafa no-repeat; 
+    font: bold 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; 
+    color: #797268; 
+} 
+/*页码显示样式*/
+.page{
+    float:right;
+
+}
+/*编辑窗口样式*/
+#detail{
+    padding:20px 0 20px 0;
+    text-align:center;
+    width:600px;
+    height:400px;
+    background-color:#CCFFFF;
+    overflow-y:scroll;
+}
+.line{
+      text-align:left;
+      float:left;
+      width:600px;
+      padding:0;
+      margin:0 auto;
+}
+.btn{
+    text-align:center;
+    float:left;
+    width:600px;
+    padding:0;
+    margin:0 auto;
+}
+#holder {
+    height: 60px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 60px;
+    margin: 0;
+    z-index:99999;
+}
+#spin-form{
+    height: 40px;
+    left: 900px;
+    margin: -15px 0 0 -300px;
+    overflow: hidden;
+    position: absolute;
+    top: 430px;
+    width: 60px;
+    z-index:99999;
+}
+/*登陆页面样式*/
+.Frame{
+    width:434px;
+    height: 210px;
+    background:url(../Images/img_bg.png);
+    margin:0 auto;
+    margin-top:200px;
+}
+.user{
+    position: absolute;
+    margin:50px 0 0 -100px ;
+    height:35px;
+}
+#usertxt{
+    position: absolute;
+    margin: 2px 0 0 10px;
+    float:left;
+    height:30px;
+    width:150px;
+    BACKGROUND: none transparent scroll repeat 0% 0%;
+    border:none;
+    font-family: "Microsoft YaHei";
+    font-size:20px;
+    color:white;
+}
+.passwd{
+    position: absolute;
+    margin:120px 0 0 -100px ;
+    height:35px;
+}
+#passwdtxt{
+    position: absolute;
+    margin: 2px 0 0 10px;
+    height:30px;
+    width:150px;
+    BACKGROUND: none transparent scroll repeat 0% 0%;
+    border:none;
+    font-family: "Microsoft YaHei";
+    font-size:20px;
+    color:white;
+}
+.loginbtn{
+    position: absolute;
+    margin:173px 0 0 -100px ;
+}
+#guest{
+    width:120px;
+    margin-left:20px;
+    margin-top:2px;
+    text-align: center;
+    font-family: "Microsoft YaHei";
+    font-size:15px;
+    color:white;
+    position: absolute;
+    border: solid 1px;
+    text-decoration: none;
+}

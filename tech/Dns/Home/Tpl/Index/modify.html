@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>批量修改</title>
+<link  rel="stylesheet" type="text/css" href="__PUBLIC__/Css/base.css"/>
+<script type="text/javascript">
+    var PUBLIC= "__PUBLIC__";
+    var APP = "__APP__";
+    var ROOT = "__ROOT__";
+</script>
+<script  type="text/javascript" src="__PUBLIC__/Js/jquery.js" charset="utf-8"></script>
+<script  type="text/javascript" src="__PUBLIC__/Js/dml.js"></script>
+</head>
+<style>
+    #update{
+        margin:0 auto;
+        width:600px;
+        margin-top: 50px;
+    }
+    .mark{
+        font-family:"宋体";
+        font-size:15px;
+        COLOR: #8080FF;
+    }
+</style>
+
+<body>
+<div id="update">
+    <a id="back" href="__URL__"><img src="__PUBLIC__/Images/new/btn_return.png"/></a>
+    <fieldset>
+        <legend class="mark"><font face='Microsoft YaHei'>DNS Modify</font></legend>
+        <table>
+        <tr><th>Zone</th><th>Host</th><th>Type</th><th>IP</th><th>级别</th></tr>
+        <volist name='data' id='vo'>
+			<if condition="$vo.level eq 'major'">
+				<tr bgcolor="#FF0000">
+                <input type="hidden" name="id" id="id"  value="<{$vo.id}>"/>
+                <td>
+                    <select name="zone">
+                        <option value="idc2" <eq name="vo.zone" value="idc2" >selected</eq> >IDC2</option> 
+                        <option value="idc3" <eq name="vo.zone" value="idc3" >selected</eq> >IDC3</option>
+                        <option value="idc4" <eq name="vo.zone" value="idc4" >selected</eq> >IDC4</option>
+                        <option value="idc5" <eq name="vo.zone" value="idc5" >selected</eq> >IDC5</option>
+                        <option value="db" <eq name="vo.zone" value="DB" >selected</eq> >DB</option>
+                        <option value="api" <eq name="vo.zone" value="API" >selected</eq> >API</option>
+                        <option value="dangdang.com" <eq name="vo.zone" value="dangdang.com" >selected</eq> >DANGDANG.COM</option>
+                    </select>
+                </td>
+                <td><input type="text" name="host" value="<{$vo.host}>"/></td>
+                <td><input type="text" name="type" value="<{$vo.dnstype}>"/></td>
+                <td><input type="text" name="data" value="<{$vo.data}>"/></td>
+				<td><input type="text" name="level" value="<{$vo.level}>" disabled/></td>
+				</tr>
+			<else />
+				<tr>
+                <input type="hidden" name="id" id="id"  value="<{$vo.id}>"/>
+                <td>
+                    <select name="zone">
+                        <option value="idc2" <eq name="vo.zone" value="idc2" >selected</eq> >IDC2</option> 
+                        <option value="idc3" <eq name="vo.zone" value="idc3" >selected</eq> >IDC3</option>
+                        <option value="idc4" <eq name="vo.zone" value="idc4" >selected</eq> >IDC4</option>
+                        <option value="idc5" <eq name="vo.zone" value="idc5" >selected</eq> >IDC5</option>
+                        <option value="db" <eq name="vo.zone" value="DB" >selected</eq> >DB</option>
+                        <option value="api" <eq name="vo.zone" value="API" >selected</eq> >API</option>
+                        <option value="dangdang.com" <eq name="vo.zone" value="dangdang.com" >selected</eq> >DANGDANG.COM</option>
+                    </select>
+                </td>
+                <td><input type="text" name="host" value="<{$vo.host}>"/></td>
+                <td><input type="text" name="type" value="<{$vo.dnstype}>"/></td>
+                <td><input type="text" name="data" value="<{$vo.data}>"/></td>
+				<td><input type="text" name="level" value="<{$vo.level}>" disabled/></td>
+				</tr>
+			</if>
+        </volist>
+        <span class="btn">
+            <tr><td align="center" style='background:#fff' colspan=5><input type="button" name="save" class="save" onclick="updating()"/></td></tr>
+        </span>
+        </table>
+    </fieldset>
+</div>
+<div>
+	<br>
+	兄弟，上面标红的域名为重要域名，请谨慎修改！！
+</div>
+</body>
+</html>
